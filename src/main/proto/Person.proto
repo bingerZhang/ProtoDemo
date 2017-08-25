@@ -1,0 +1,37 @@
+syntax = "proto3";
+option java_package = "com.test.proto";
+option java_outer_classname = "PersonModel";
+
+message Person {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    Gender gender = 4;
+    repeated PhoneNumber phone = 5;
+    ComplexObject complexObject = 6;
+}
+
+enum Gender {
+    MAN = 0;
+    WOMAN = 1;
+}
+
+message PhoneNumber{
+    string number =1;
+    PhoneType type = 2;
+}
+
+enum PhoneType{
+    MOBILE = 0;
+    HOME = 1;
+    WORKE = 2;
+}
+
+message ComplexObject {
+    map<string, MapVaule> map = 1; // 定义Map对象
+}
+// 定义Map的value值
+message MapVaule {
+    int32 id = 1;
+    string mapValue = 2;
+}
