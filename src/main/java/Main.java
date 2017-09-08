@@ -3,7 +3,6 @@
  */
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.test.proto.AddressBookModel;
 import com.test.proto.PersonModel.*;
 import com.test.proto.AddressBookModel.*;
 
